@@ -90,9 +90,9 @@ dp3/{DELIM}				{ yTRACE(DP3); return DP3; }
 rsq/{DELIM}				{ yTRACE(RSQ); return RSQ; }
 lit/{DELIM}				{ yTRACE(LIT); return LIT; }
 
-'if'				{ yTRACE(IF); return IF; }
-'else'				{ yTRACE(ELSE); return ELSE; }
-'while' 			{ yTRACE(WHILE); return WHILE; }
+if/{DELIM}				{ yTRACE(IF); return IF; }
+else/{DELIM}				{ yTRACE(ELSE); return ELSE; }
+while/{DELIM} 			{ yTRACE(WHILE); return WHILE; }
 
 "int"/{WS}			{ yTRACE(INT_T); return INT_T;}
 "float"/{WS}			{ yTRACE(FLOAT_T); return FLOAT_T;}
@@ -116,8 +116,8 @@ bvec4			{ yTRACE(BVEC4); return BVEC4; }
 "*"					{ yTRACE(MUL); return MUL;}
 "/"					{ yTRACE(DIV); return DIV;}
 "^"					{ yTRACE(EXP); return EXP;}
-'true'				{ yTRACE(T); return T;}
-'false'				{ yTRACE(F); return F;}
+true				{ yTRACE(T); return T;}
+false				{ yTRACE(F); return F;}
 "&&"				{ yTRACE(AND); return AND;}
 "||"				{ yTRACE(OR); return OR;}
 "=="				{ yTRACE(EQ); return EQ;}
